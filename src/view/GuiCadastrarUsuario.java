@@ -38,7 +38,7 @@ public class GuiCadastrarUsuario extends AbstractJavaFxView {
     @Override
     protected void initialize() {
         loadFXML("/resources/fxml/GuiCadastrarUsuario.fxml");
-        jcbTipo.getItems().addAll("Administrador", "Comun");
+        jcbTipo.getItems().addAll("Administrador", "Comum");
         jcbTipo.getSelectionModel().selectFirst();
     }
 

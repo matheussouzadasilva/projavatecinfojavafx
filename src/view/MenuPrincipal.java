@@ -120,7 +120,7 @@ private final Stage stage = new Stage();
         if(opcao == 1){
             this.menuAdministrador();
         }else if(opcao == 2){
-            this.menuUsuarioComun();
+            this.menuUsuarioComum();
         }else{
             Platform.exit();
         }
@@ -128,7 +128,7 @@ private final Stage stage = new Stage();
 
     private void menuAdministrador(){ }
 
-    private void menuUsuarioComun(){
+    private void menuUsuarioComum(){
         if (jmiUsuario != null) {
             jmiUsuario.setVisible(false);
         }
