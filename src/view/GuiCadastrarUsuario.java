@@ -29,6 +29,7 @@ public class GuiCadastrarUsuario extends AbstractJavaFxView {
 
     @FXML private TextField jtNome;
     @FXML private PasswordField jpfSenha;
+    @FXML private PasswordField jpfConfirmacaoSenha;
     @FXML private ComboBox<String> jcbTipo;
 
     public GuiCadastrarUsuario() {
@@ -44,15 +45,25 @@ public class GuiCadastrarUsuario extends AbstractJavaFxView {
 
     @FXML
     private void handleCadastrar() {
+        String senha = jpfSenha.getText();
+        String senhaconfirmada = jpfConfirmacaoSenha.getText();
+
         try {
-            if (!jpfSenha.getText().isEmpty() && !jtNome.getText().isEmpty()) {
-                Usuario u = new Usuario();
-                UsuarioController uc = new UsuarioController();
-                u.setLogin(jtNome.getText());
-                u.setSenha(Criptografia.criptografa(jpfSenha.getText()));
-                u.setTipo(jcbTipo.getSelectionModel().getSelectedItem());
-                uc.cadastrarUsuario(u);
-                FxViewSupport.info("Usuário cadastrado com sucesso!");
+            if (!jpfSenha.getText().isEmpty() && !jpfConfirmacaoSenha.getText().isEmpty() && !jtNome.getText().isEmpty()) {
+                if (senha.equals(senhaconfirmada)) {
+                    Usuario u = new Usuario();
+                    UsuarioController uc = new UsuarioController();
+                    u.setLogin(jtNome.getText());
+                    u.setSenha(Criptografia.criptografa(jpfSenha.getText()));
+                    u.setTipo(jcbTipo.getSelectionModel().getSelectedItem());
+                    uc.cadastrarUsuario(u);
+                    jtNome.setText("");
+                    jpfSenha.setText("");
+                    jpfConfirmacaoSenha.setText("");
+                    FxViewSupport.info("Usuário cadastrado com sucesso!");
+                } else {
+                    FxViewSupport.error("A Senha e Confirmação da Senha não são iguais!");
+                }
             } else {
                 FxViewSupport.error("Preencha Todos Os Campos!!!");
             }
