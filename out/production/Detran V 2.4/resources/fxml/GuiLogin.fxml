@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <HBox spacing="20.0">
+            <children>
+                <GridPane hgap="8.0" vgap="8.0" HBox.hgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Usuário" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="jtUsuario" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Senha" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <PasswordField fx:id="jpfSenha" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Tipo Usuário" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="jcbTipo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    </children>
+                </GridPane>
+                <ImageView fx:id="logo" fitWidth="170.0" preserveRatio="true">
+                    <image>
+                        <Image url="@/icones/Detran.jpeg" />
+                    </image>
+                </ImageView>
+            </children>
+        </HBox>
+        <HBox spacing="10.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#processoLogar" text="Logar" />
+                <Button mnemonicParsing="false" onAction="#handleCadastrarSe" text="Cadastrar-se" />
+            </children>
+        </HBox>
+        <Label fx:id="jlDica" />
+    </children>
+</VBox>

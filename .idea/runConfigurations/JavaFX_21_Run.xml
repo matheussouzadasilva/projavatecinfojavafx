@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="JavaFX 21 Run" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="view.GuiLogin" />
+    <module name="Detran V 2.4" />
+    <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../openjfx/javafx-sdk-21.0.11/lib --add-modules javafx.controls,javafx.fxml" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
