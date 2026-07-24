@@ -1,0 +1,75 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/*
+ * GuiCadastrarUsuario.java
+ *
+ * Created on 05/05/2011, 20:50:35
+ */
+
+package br.com.detran.view;
+
+import controller.UsuarioController;
+import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import model.Usuario;
+import util.Criptografia;
+
+/**
+ * @version 2.4
+ * @author Matheus Souza
+ * @since 02/05/2011
+ */
+
+public class GuiCadastrarUsuario extends AbstractJavaFxView {
+
+    @FXML private TextField jtNome;
+    @FXML private PasswordField jpfSenha;
+    @FXML private PasswordField jpfConfirmacaoSenha;
+    @FXML private ComboBox<String> jcbTipo;
+
+    public GuiCadastrarUsuario() {
+        super("Cadastro de Usuário");
+    }
+
+    @Override
+    protected void initialize() {
+        loadFXML("/view/GuiCadastrarUsuario.fxml");
+        jcbTipo.getItems().addAll("Administrador", "Comum");
+        jcbTipo.getSelectionModel().selectFirst();
+    }
+
+    @FXML
+    private void handleCadastrar() {
+        String senha = jpfSenha.getText();
+        String senhaconfirmada = jpfConfirmacaoSenha.getText();
+
+        try {
+            if (!jpfSenha.getText().isEmpty() && !jpfConfirmacaoSenha.getText().isEmpty() && !jtNome.getText().isEmpty()) {
+                if (senha.equals(senhaconfirmada)) {
+                    Usuario u = new Usuario();
+                    UsuarioController uc = new UsuarioController();
+                    u.setLogin(jtNome.getText());
+                    u.setSenha(Criptografia.criptografa(jpfSenha.getText()));
+                    u.setTipo(jcbTipo.getSelectionModel().getSelectedItem());
+                    uc.cadastrarUsuario(u);
+                    jtNome.setText("");
+                    jpfSenha.setText("");
+                    jpfConfirmacaoSenha.setText("");
+                    FxViewSupport.info("Usuário cadastrado com sucesso!");
+                } else {
+                    FxViewSupport.error("A Senha e Confirmação da Senha não são iguais!");
+                }
+            } else {
+                FxViewSupport.error("Preencha Todos Os Campos!!!");
+            }
+
+        } catch (Exception e) {
+            FxViewSupport.error("Erro! "+e.getMessage());
+        }
+    }
+}
