@@ -3,9 +3,9 @@
  * and open the template in the editor.
  */
 
-package model;
+package br.com.detran.model;
 
-import util.ConexaoBanco;
+import br.com.detran.util.ConexaoBanco;
 
 import java.io.UnsupportedEncodingException;
 import java.sql.Connection;

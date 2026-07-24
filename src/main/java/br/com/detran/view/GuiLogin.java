@@ -11,7 +11,7 @@
 
 package br.com.detran.view;
 
-import controller.UsuarioController;
+import br.com.detran.controller.UsuarioController;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -23,8 +23,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import model.Usuario;
-import util.Criptografia;
+import br.com.detran.model.Usuario;
+import br.com.detran.util.Criptografia;
 
 import java.io.IOException;
 

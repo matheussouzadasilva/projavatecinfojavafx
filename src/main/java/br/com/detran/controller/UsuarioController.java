@@ -3,12 +3,12 @@
  * and open the template in the editor.
  */
 
-package controller;
+package br.com.detran.controller;
 
 import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
-import model.Usuario;
-import model.UsuarioDAO;
+import br.com.detran.model.Usuario;
+import br.com.detran.model.UsuarioDAO;
 
 /**
  * @version 2.4

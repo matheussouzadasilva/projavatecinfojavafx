@@ -1,4 +1,4 @@
-package util;
+package br.com.detran.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

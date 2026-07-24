@@ -11,13 +11,13 @@
 
 package br.com.detran.view;
 
-import controller.UsuarioController;
+import br.com.detran.controller.UsuarioController;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import model.Usuario;
-import util.Criptografia;
+import br.com.detran.model.Usuario;
+import br.com.detran.util.Criptografia;
 
 /**
  * @version 2.4

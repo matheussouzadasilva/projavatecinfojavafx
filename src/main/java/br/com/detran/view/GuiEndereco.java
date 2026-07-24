@@ -1,7 +1,7 @@
 package br.com.detran.view;
 
-import controller.CondutorController;
-import controller.EnderecoController;
+import br.com.detran.controller.CondutorController;
+import br.com.detran.controller.EnderecoController;
 import java.util.ArrayList;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -10,8 +10,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import model.Condutor;
-import model.Endereco;
+import br.com.detran.model.Condutor;
+import br.com.detran.model.Endereco;
 
 public class GuiEndereco extends AbstractJavaFxView {
 

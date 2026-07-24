@@ -3,8 +3,8 @@
  * and open the template in the editor.
  */
 
-package model;
-import util.ConexaoBanco;
+package br.com.detran.model;
+import br.com.detran.util.ConexaoBanco;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

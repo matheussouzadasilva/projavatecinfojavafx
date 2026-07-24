@@ -1,6 +1,6 @@
 package br.com.detran.view;
 
-import controller.CondutorController;
+import br.com.detran.controller.CondutorController;
 import java.util.ArrayList;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -10,7 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
-import model.Condutor;
+import br.com.detran.model.Condutor;
 
 public class GuiDeletarCondutor extends AbstractJavaFxView {
 

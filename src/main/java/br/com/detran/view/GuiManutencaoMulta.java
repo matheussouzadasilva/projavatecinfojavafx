@@ -1,6 +1,6 @@
 package br.com.detran.view;
 
-import controller.MultaController;
+import br.com.detran.controller.MultaController;
 import java.util.ArrayList;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -8,7 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import model.Multa;
+import br.com.detran.model.Multa;
 
 public class GuiManutencaoMulta extends AbstractJavaFxView {
 

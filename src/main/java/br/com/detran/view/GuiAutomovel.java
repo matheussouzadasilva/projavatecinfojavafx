@@ -10,8 +10,8 @@
  */
 
 package br.com.detran.view;
-import controller.AutomovelController;
-import controller.MultaController;
+import br.com.detran.controller.AutomovelController;
+import br.com.detran.controller.MultaController;
 import java.util.ArrayList;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -20,8 +20,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import model.Automovel;
-import model.Multa;
+import br.com.detran.model.Automovel;
+import br.com.detran.model.Multa;
 
 /**
  * @version 2.4

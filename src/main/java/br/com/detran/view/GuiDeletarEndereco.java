@@ -1,6 +1,6 @@
 package br.com.detran.view;
 
-import controller.EnderecoController;
+import br.com.detran.controller.EnderecoController;
 import java.util.ArrayList;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -10,7 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
-import model.Endereco;
+import br.com.detran.model.Endereco;
 
 public class GuiDeletarEndereco extends AbstractJavaFxView {
 

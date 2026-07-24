@@ -1,7 +1,7 @@
 package br.com.detran.view;
 
-import controller.AutomovelController;
-import controller.CondutorController;
+import br.com.detran.controller.AutomovelController;
+import br.com.detran.controller.CondutorController;
 import java.util.ArrayList;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -12,8 +12,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
-import model.Automovel;
-import model.Condutor;
+import br.com.detran.model.Automovel;
+import br.com.detran.model.Condutor;
 
 public class GuiCondutor extends AbstractJavaFxView {
 

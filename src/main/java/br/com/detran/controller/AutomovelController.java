@@ -3,14 +3,14 @@
  * and open the template in the editor.
  */
 
-package controller;
+package br.com.detran.controller;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-import model.Automovel;
-import model.AutomovelDAO;
-import util.Erro;
+import br.com.detran.model.Automovel;
+import br.com.detran.model.AutomovelDAO;
+import br.com.detran.util.Erro;
 
 /**
  * @version 2.4

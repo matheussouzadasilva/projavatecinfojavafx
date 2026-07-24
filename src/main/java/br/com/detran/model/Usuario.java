@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package model;
+package br.com.detran.model;
 
 import java.sql.SQLException;
 

@@ -3,13 +3,13 @@
  * and open the template in the editor.
  */
 
-package controller;
+package br.com.detran.controller;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import model.Endereco;
-import model.EnderecoDAO;
+import br.com.detran.model.Endereco;
+import br.com.detran.model.EnderecoDAO;
 
 /**
  * @version 2.4

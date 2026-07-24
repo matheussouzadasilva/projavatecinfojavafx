@@ -5,9 +5,9 @@
 Automovel a
  */
 
-package model;
+package br.com.detran.model;
 
-import util.ConexaoBanco;
+import br.com.detran.util.ConexaoBanco;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -3,13 +3,13 @@
  * and open the template in the editor.
  */
 
-package controller;
+package br.com.detran.controller;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import model.Multa;
-import model.MultaDAO;
-import util.Erro;
+import br.com.detran.model.Multa;
+import br.com.detran.model.MultaDAO;
+import br.com.detran.util.Erro;
 
 /**
  * @version 2.4
